@@ -1,0 +1,10 @@
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>{{ if eq .URL "/" }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+	<meta name="description" content="{{ .Site.Params.description }}" />
+	<meta name="keywords" content="{{ .Site.Params.keywords }}" />
+	<meta name="author" content="{{ .Site.Params.author }}" />
+	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/metro-bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/custom.css" />

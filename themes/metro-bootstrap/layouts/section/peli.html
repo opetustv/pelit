@@ -1,0 +1,15 @@
+
+{{ define "main" }}
+  <table class="table">
+    <tr>
+      <th>Nimi</th>
+      <th>Kuvaus</th>
+    </tr>
+    {{ range sort .Data.Pages ".Params.order" }}
+    <tr>
+      <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+      <td>{{ .Description }}</td>
+    </tr>
+    {{ end }}
+  </table>
+{{ end }}

@@ -1,0 +1,10 @@
+
+{{ define "main" }}
+  <ol class="breadcrumb">
+    <li><a href="/">Etusivu</a></li>
+    <li class="active">{{ .Title }}</li>
+  </ol>
+  <h1>{{ .Title }}</h1>
+  <p style="color: #777; font-style: italic;"><i class="fa fa-user-circle-o"></i> <span title="Pelin luoja"><a href="{{ .Params.author.link }}">{{ .Params.author.name }}</a></span> <span title="Pelin luomiseen käytetyt teknologiat/työkalut"><i class="fa fa-wrench"></i> {{ .Params.author.tools }}</span></p>
+  {{ .Content }}
+{{ end }}

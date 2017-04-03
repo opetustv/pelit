@@ -1,0 +1,24 @@
+
+{{ define "main" }}
+
+	{{ $games := where .Data.Pages "Section" "peli" }}
+	{{ $lastIndex := sub (len $games) 1 }}
+	<div class="row">
+	{{ range $index, $elem := $games }}
+		{{/* {{ $column := mod $index 3 }} */}}
+		{{/* {{ if eq $column 0 }} */}}
+		{{/* {{ end }} */}}
+		<div class="col-sm-6 col-md-4">
+			<a href="{{ .Permalink }}">
+				<div class="thumbnail tile tile-wide" style="background-image: url('/img/thumbnails/{{ .Params.thumbnail }}'); background-size: cover;">
+					<h1>{{ .Title }}</h1>
+					<!--p>{{ .Params.description }}</p-->
+				</div>
+			</a>
+		</div>
+		{{/* {{ if or (eq $column 2) (eq $index $lastIndex) }} */}}
+		{{/* {{ end }} */}}
+	{{ end }}
+	</div>
+
+{{ end }}
